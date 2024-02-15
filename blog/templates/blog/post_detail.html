@@ -1,20 +1,25 @@
 {% extends 'blog/base.html' %}
-{% block content %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block subtitle %}Problems look mighty small from 150 miles up{% endblock %}
 
-                <article class="post">
+{% block content %}
+    <article class="mb-4">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-md-10 col-lg-8 col-xl-7">
                     <aside class="actions">
-                        <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}">
-                        </a>
+                        <a class="btn btn-secondary" href="{% url 'post_edit' pk=post.pk %}"></a>
                     </aside>
                     {% if post.published_date %}
                         <time class="date">
                             {{ post.published_date }}
                         </time>
-                        {% endif %}
-                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
-                        <p>{{ post.text|linebreaksbr }}</p>
-                        <h3 class="all-posts-link"><a href="{% url 'post_list' %}">Все записи</a></h3>
-                        
-
-                    </article>
+                    {% endif %}
+                    <h2>{{ post.title }}</h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                    <h3 class="all-posts-link"><a href="{% url 'post_list' %}">Все записи</a></h3>
+                </div>
+            </div>
+        </div>
+    </article>
 {% endblock %}
