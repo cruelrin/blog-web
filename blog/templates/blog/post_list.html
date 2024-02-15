@@ -1,8 +1,18 @@
 {% extends 'blog/base.html' %}
-
-{% block content %}
-    {% for post in posts %}
-        <h1 class="animate__animated animate__fadeInLeft"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
-        <p>{{ post.text }}</p>
-    {% endfor %}
-{% endblock %}
+    {% block content %}
+    <h3 class="new-posts-link"><a href="{% url 'post_new' %}">Формы</a></h3>
+                {% for post in posts %}
+                    <article class="post">
+                        <time class="date">
+                            {{ post.published_date }}
+                        </time>
+                        <h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+                        <p>{{ post.text|linebreaksbr }}</p>
+                        
+                        
+                    
+        
+                    </article>
+                {% endfor %}
+                
+    {% endblock %}
