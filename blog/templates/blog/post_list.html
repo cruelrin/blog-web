@@ -1,0 +1,8 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <h1 class="animate__animated animate__fadeInLeft"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+        <p>{{ post.text }}</p>
+    {% endfor %}
+{% endblock %}
