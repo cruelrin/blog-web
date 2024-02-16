@@ -1,0 +1,22 @@
+header.page-header h1 {
+    color: #00FF00;
+}
+
+/* Override Bootstrap styles for link color */
+h1 a {
+    color: #4CAF50 !important; /* Change this to your desired green color */
+}
+
+/* Blog Post Styles */
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.post h2 a {
+    color: #4CAF50; /* Set link color for post titles */
+}
+
+/* Rest of your styles */
