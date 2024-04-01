@@ -23,7 +23,7 @@ header.page-header::before {
 header.page-header h1 {
     color: #ffffff;
     font-size: 80px;
-    font-weight: bold;
+    font-weight: 900;
     font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-style: bold;
     margin-bottom: 20px; 
@@ -113,7 +113,7 @@ body {
 }
 
 
-/* Общие стили для блога */
+
 .post {
     background-color: #fff;
     border: none;
@@ -127,43 +127,53 @@ body {
 
 .post aside.actions {
     text-align: right;
-    margin-top: 20px; /* Добавление отступа между блоком действий и контентом поста */
+    margin-top: 20px; 
 }
 
-/* Стили для кнопки "Редактировать" */
+
 .post aside.actions .btn-secondary {
-    background-color: #8e44ad; /* Светло-фиолетовый цвет фона */
-    color: #fff; /* Белый цвет текста */
-    padding: 10px 20px; /* Отступы для лучшего визуального восприятия */
-    border: none; /* Убрать границу */
-    border-radius: 5px; /* Опционально: закругленные углы */
+    background-color: #8e44ad;  
+    color: #fff; 
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
     font-size: 16px;
     text-decoration: none;
     cursor: pointer;
-    margin-top: 20px; /* Добавление отступа между кнопкой "Редактировать" и контентом поста */
+    margin-top: 20px; 
 }
 
-/* Эффект при наведении на кнопку "Редактировать" */
+ 
 .post aside.actions .btn-secondary:hover {
-    background-color: #6c3483; /* Чуть более темно-фиолетовый цвет при наведении */
+    background-color: #6c3483;  
 }
 
-/* Стили для ссылки "Все посты" */
+ 
 .all-posts-link a {
     margin-bottom: 20px;
-    margin-right: 20px; /* Добавление маргина справа */
-    color: #3498db; /* Светло-синий цвет текста */
+    margin-right: 20px;  
+    color: #3498db;  
     text-decoration: none;
 }
 
-/* Эффект при наведении на ссылку "Все посты" */
+ 
 .all-posts-link a:hover {
-    text-decoration: none; /* Убрать подчеркивание при наведении */
+    text-decoration: none;  
 }
 
 
+.edit-post form {
+    margin-top: 20px;
+}
 
-/* Стили для страницы редактирования поста */
+.edit-post h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+ 
 .edit-post {
     background-color: #fff;
     border: none;
@@ -174,20 +184,83 @@ body {
     position: relative;
     z-index: 1;
 }
+ 
 
-/* Стили для кнопки "Save" на странице редактирования поста */
 .edit-post .save {
-    background-color: #9b75f1; /* Светло-синий цвет фона */
-    color: #fff; /* Белый цвет текста */
-    padding: 10px 20px; /* Отступы для лучшего визуального восприятия */
-    border: none; /* Убрать границу */
-    border-radius: 5px; /* Опционально: закругленные углы */
+    background-color: #9b75f1;  
+    color: #fff;  
+    padding: 10px 20px;  
+    border: none;  
+    border-radius: 5px;  
     font-size: 16px;
     text-decoration: none;
     cursor: pointer;
 }
 
-/* Эффект при наведении на кнопку "Save" */
 .edit-post .save:hover {
-    background-color: #2980b9; /* Чуть более темно-синий цвет при наведении */
+    background-color: #3c6d8d; 
+}
+
+
+.edit-post button {
+    margin-top: 10px;
+}
+
+.edit-post input,
+.edit-post textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+.edit-post .post-form {
+    width: 100%;
+}
+
+button, select {
+    text-transform: none;
+    margin-top: 30px;
+    /* color: chocolate; */
+}
+
+.btn-secondary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #8a5ee3;
+    /* --bs-btn-border-color: #6c757d; */
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #9f64d1;
+    /* --bs-btn-hover-border-color: #565e64; */
+    --bs-btn-focus-shadow-rgb: 130,138,145;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #565e64;
+    --bs-btn-active-border-color: #51585e;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #6c757d;
+    --bs-btn-disabled-border-color: #6c757d;
+}
+
+.h3, h3 {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color: #453d83;
+    font-size: 33px;
+    font-weight: bold;
+}
+
+
+
+.h4, h4 {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+    margin-bottom: 50px;
+    color: #453d83;
+    font-size: 33px;
+    font-weight: light;
+ 
 }
